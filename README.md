@@ -41,6 +41,7 @@ Clone the Repository
 Open a terminal and run:
 
 git clone https://github.com/Dikshit-Bhattacharya/pdf_talk.git
+
 cd pdf_talk
 
 
