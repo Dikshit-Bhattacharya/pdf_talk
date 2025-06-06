@@ -1,0 +1,6 @@
+flask
+flask-cors
+transformers
+PyMuPDF
+torch
+gunicorn
