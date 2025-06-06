@@ -35,3 +35,46 @@ Since the model is not fine-tuned for domain-specific documents (like medical or
 Answers depend entirely on the content of the uploaded document — if a topic is not clearly explained, the model may guess or respond inaccurately.
 
 Scanned or image-based PDFs are not supported, as the app currently processes only text-based PDFs.
+
+🛠️ How to Use This Project Locally
+Clone the Repository
+Open a terminal and run:
+
+git clone https://github.com/Dikshit-Bhattacharya/pdf_talk.git
+cd pdf_talk
+
+
+Set Up the Backend
+
+Make sure you have Python installed.
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+
+Run the backend:
+
+python app.py
+(Check where the app.py running.If it is other then local host 5000 change the backend value to your local host where python is running in App.jsx in frontend folder)
+
+Set Up the Frontend
+
+Navigate to the frontend folder:
+cd frontend
+
+Install Node dependencies:
+npm install
+
+Start the frontend server:
+npm run dev
+
+Access the App
+
+Upload a PDF
+
+Upload any PDF document.
+
+The app will auto-generate sample Q&A.
+
+Ask custom questions from the document content.
