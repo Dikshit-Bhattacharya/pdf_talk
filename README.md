@@ -1,3 +1,6 @@
+![Demo Screenshot](https://github.com/Dikshit-Bhattacharya/pdf_talk/blob/main/pics(not%20required%20for%20project)/Screenshot%202025-06-06%20141212.png?raw=true)
+
+
 📝 Project Title: PDF Talk – Ask Questions to Your PDFs
 📌 Introduction
 PDF Talk is a personal project that allows users to upload a PDF document and interact with it through natural language questions. It uses NLP (Natural Language Processing) techniques to extract relevant answers from the PDF content.
