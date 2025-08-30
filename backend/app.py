@@ -1,18 +1,20 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from transformers import pipeline
 import fitz
-import io
 import os
 
 app = Flask(__name__)
 CORS(app)
 
+# Serve favicon to avoid 404
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico')
+
 # Initialize the QA pipeline
 try:
     qa_pipeline = pipeline("question-answering", model="deepset/roberta-base-squad2")
-     # qa_pipeline = pipeline("question-answering", model="distilbert-base-cased-distilled-squad")
-    # qa_pipeline = pipeline("question-answering", model="twmkn9/bert-base-uncased-squad2")
 except Exception as e:
     print(f"Error loading model: {e}")
     qa_pipeline = None
@@ -124,7 +126,4 @@ def ask():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-
     app.run(host='0.0.0.0', port=port, debug=False)
-
-
