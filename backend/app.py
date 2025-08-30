@@ -10,9 +10,9 @@ CORS(app)
 
 # Initialize the QA pipeline
 try:
-    # qa_pipeline = pipeline("question-answering", model="deepset/roberta-base-squad2")
+    qa_pipeline = pipeline("question-answering", model="deepset/roberta-base-squad2")
      # qa_pipeline = pipeline("question-answering", model="distilbert-base-cased-distilled-squad")
-    qa_pipeline = pipeline("question-answering", model="twmkn9/bert-base-uncased-squad2")
+    # qa_pipeline = pipeline("question-answering", model="twmkn9/bert-base-uncased-squad2")
 except Exception as e:
     print(f"Error loading model: {e}")
     qa_pipeline = None
@@ -126,4 +126,5 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
 
     app.run(host='0.0.0.0', port=port, debug=False)
+
 
