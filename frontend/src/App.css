@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #dbefff, #f5f7fa);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Main container */
+.App {
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 2.5rem 3rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.App:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+/* Loader animation */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.loader {
+  border: 8px solid #e0e0e0;
+  border-top: 8px solid #007bff;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 15px;
+  box-shadow: 0 0 12px rgba(0, 123, 255, 0.3);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .App {
+    padding: 2rem;
+    max-width: 85%;
+    margin: 2rem auto;
+    border-radius: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .App {
+    padding: 1.5rem;
+    max-width: 92%;
+    margin: 1.5rem auto;
+    border-radius: 12px;
+  }
+
+  .loader {
+    width: 50px;
+    height: 50px;
+    border-width: 6px;
+  }
+}
+.delete-btn {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #d9363e;
+}
