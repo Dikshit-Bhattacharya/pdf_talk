@@ -10,7 +10,7 @@ function App() {
   const [loading, setLoading] = useState(false);
 
 
-  const API_BASE_URL = 'https://pdf-talk-7bbv.onrender.com';
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   const handleFileUpload = async (formData, file) => {
     setLoading(true);
